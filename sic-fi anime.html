@@ -1,0 +1,362 @@
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sic-fi Anime</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;  
+            color: #fff;  
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .anime-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .anime-box {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00ffff; 
+            width: 300px;
+            margin: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;  
+            position: relative;
+        }
+
+        .anime-box img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .anime-box h2 {
+            margin: 15px 0;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .anime-box .like-btn {
+            background-color: transparent;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-image: url('heart-icon.png'); 
+            background-size: cover;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .anime-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 15px gold;  /* Golden glow effect on hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .back-btn {
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ff4757;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        /* Enlarged box when double-clicked */
+        .anime-box.expanded {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 100;
+            background-color: #333;
+            box-shadow: none;
+            overflow-y: auto;
+            margin: 0;
+            border-radius: 0;
+            padding: 20px;
+        }
+
+        .anime-box.expanded img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .anime-box.expanded .back-btn {
+            display: block;
+        }
+
+        .anime-box.expanded h2, .anime-box.expanded p {
+            color: white;
+        }
+
+        .anime-box.expanded .anime-info {
+            display: block;  
+        }
+
+        .anime-info {
+            display: none; 
+            color: white;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+       
+        .plot {
+            margin-top: 10px;
+            font-style: italic;
+            color: #ffdf00;
+        }
+
+        
+        .trailer {
+            margin: 20px auto;
+            display: block;
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+        }
+
+        
+        @media (max-width: 768px) {
+            .anime-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .anime-box {
+                width: 90%;
+            }
+
+            .anime-box.expanded img {
+                width: 100%;
+            }
+
+            .trailer {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sic-fi Anime</h1>
+        <p>
+            Welcome to the Sci-Fi Anime Realm!
+            Explore a universe of advanced technology and imaginative worlds! From thrilling space battles to intriguing dystopias, discover must-watch sci-fi anime that challenges reality and takes you on unforgettable journeys.            
+        !! DO DOUBLE CLICK ON ANIME FOR MORE INFORMATION !!</p>
+    </header>
+
+    <div class="anime-container">
+        <div class="anime-box" id="steins-gate">
+            <button class="back-btn">Back</button>
+            <img src="steinsgate-wallpapers.png" alt="Steins;Gate">
+            <h2>Steins;Gate</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> White Fox</p>
+                <p><strong>Episodes:</strong> 24</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> A group of friends discover a way to send messages to the past, leading to unforeseen consequences and a race against time to fix their mistakes.</p>
+                <p class="plot">Can they change the past without altering their future? Prepare for a mind-bending adventure...</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/uMYhjVwp0Fk?si=F9mBy7K-QlfD8-SN" title="Steins;Gate Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="ghost-in-the-shell">
+            <button class="back-btn">Back</button>
+            <img src="Ghost in the Shell.jpg" alt="Ghost in the Shell">
+            <h2>Ghost in the Shell</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Production I.G</p>
+                <p><strong>Episodes:</strong> 52</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> In a cyberpunk future, a cyborg policewoman hunts down a mysterious hacker known as the Puppet Master in a world where technology and humanity intertwine.</p>
+                <p class="plot">What defines humanity in a world dominated by technology? Prepare to question your reality...</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/8RF09G8Ymqg?si=-gZHrElX1HJX28ma" title="Ghost in the Shell Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="cowboy-bebop">
+            <button class="back-btn">Back</button>
+            <img src="Cowboy Bebop.jpg" alt="Cowboy Bebop">
+            <h2>Cowboy Bebop</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Sunrise</p>
+                <p><strong>Episodes:</strong> 26</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> Follow the adventures of bounty hunters in space as they chase down criminals across the galaxy, dealing with their pasts along the way.</p>
+                <p class="plot">Can they escape their past while navigating a dangerous universe? Get ready for an epic ride...</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/OhNwckCLzis?si=h9fFDN5jdjrvitne" title="Cowboy Bebop Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="darling-in-the-franxx">
+            <button class="back-btn">Back</button>
+            <img src="Darling in the Franxx.jpg" alt="Darling in the Franxx">
+            <h2>Darling in the Franxx</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> A-1 Pictures, Trigger</p>
+                <p><strong>Episodes:</strong> 24</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> In a post-apocalyptic world, young pilots must bond to control giant mechs and fight off monstrous creatures, all while exploring themes of love and identity.</p>
+                <p class="plot">Can they find their humanity in a world devoid of it? Prepare for an emotional journey...</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/isiV3tYW3IM?si=SEXj7xE3rSul-Dvm" title="Darling in the Franxx Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="future-diary">
+            <button class="back-btn">Back</button>
+            <img src="Future Diary.jpg" alt="Future Diary">
+            <h2>Future Diary</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Asread</p>
+                <p><strong>Episodes:</strong> 26</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> A deadly survival game unfolds as players use diaries that predict the future to eliminate each other in a quest for godhood.</p>
+                <p class="plot">Who will survive the deadly game? Get ready for suspense and betrayal...</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/wNT7pUmZLJ8?si=GbWh5iejThyNxlPH" title="Future Diary Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="code-geass">
+            <button class="back-btn">Back</button>
+            <img src="Code Geass.png" alt="Code Geass">
+            <h2>Code Geass</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Sunrise</p>
+                <p><strong>Episodes:</strong> 50</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> A young man gains the power to command anyone to obey his orders, leading him on a path of rebellion against an oppressive empire.</p>
+                <p class="plot">Will he use his power for good or become a tyrant himself? Prepare for a thrilling chess game of strategy...</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/pTnqE-dINrA" title="Code Geass Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="no-game-no-life">
+            <button class="back-btn">Back</button>
+            <img src="No Game No Life.jpg" alt="No Game No Life">
+            <h2>No Game No Life</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Madhouse</p>
+                <p><strong>Episodes:</strong> 12</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> A brother and sister duo, known as legendary gamers, are transported to a world where every conflict is settled through games.</p>
+                <p class="plot">Can they conquer this new world and defeat its god? Get ready for strategic battles...</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/CtxDR6A5tOg" title="No Game No Life Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="re:zero">
+            <button class="back-btn">Back</button>
+            <img src="Re zero.jpg" alt="Re:Zero">
+            <h2>Re:Zero - Starting Life in Another World</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> White Fox</p>
+                <p><strong>Episodes:</strong> 50</p>
+                <p><strong>Status:</strong> Ongoing</p>
+                <p><strong>Summary:</strong> A young man is transported to a fantasy world, where he discovers he has the ability to return from death, forcing him to relive traumatic experiences.</p>
+                <p class="plot">Can he change his fate while protecting those he loves? Prepare for an emotional rollercoaster...</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/PFh9U7NQosY" title="Re:Zero Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="the-promised-neverland">
+            <button class="back-btn">Back</button>
+            <img src="The Promised Neverland.jpg" alt="The Promised Neverland">
+            <h2>The Promised Neverland</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> CloverWorks</p>
+                <p><strong>Episodes:</strong> 12</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> Children at an orphanage uncover a dark secret about their fate and plot their escape from a sinister world.</p>
+                <p class="plot">Will they succeed against overwhelming odds? Get ready for a suspenseful escape...</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/6XwKpb1lj4U" title="The Promised Neverland Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        
+        </div>
+      
+        </div>
+    <footer>
+        <p>&copy; 2024 Sic-fi Anime Fan Page</p>
+    </footer>
+
+    <script>
+        
+        const animeBoxes = document.querySelectorAll('.anime-box');
+
+        animeBoxes.forEach(box => {
+            box.addEventListener('dblclick', () => {
+                box.classList.add('expanded');
+            });
+
+            const backButton = box.querySelector('.back-btn');
+            backButton.addEventListener('click', () => {
+                box.classList.remove('expanded');
+            });
+        });
+    </script>
+</body>
+</html>

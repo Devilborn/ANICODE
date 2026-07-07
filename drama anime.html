@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drama Anime</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(girlsssss.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+           background-image: url(animebalckeyes.jpg);
+           background-repeat: no-repeat;
+           background-size: cover;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .anime-box {
+            background-color: black;
+            background-size: cover;
+            border-radius: 10px;
+            width: 300px;
+            margin: 15px;
+            box-shadow: 0px 4px 8px hsl(45, 100%, 50%);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .anime-box:hover {
+            transform: scale(1.05);
+           
+        }
+        .anime-info {
+            padding: 15px;
+        }
+        .anime-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #00ffcc;
+        }
+        .anime-details {
+            margin: 10px 0;
+            color: hwb(173 1% 1%);
+        }
+        .anime-summary {
+            font-size: 14px;
+            color: hsl(173, 96%, 49%);
+            margin-bottom: 10px;
+        }
+        .like-button {
+            background-color: hsl(182, 100%, 50%);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+        .like-button:hover {
+            background-color: #ff0000;
+        }
+        .like-count {
+            margin-top: 10px;
+            font-size: 14px;
+            color: hsl(172, 94%, 50%);
+        }
+        iframe {
+            width: 100%;
+            height: 180px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Drama Anime</h1>
+    <p>Drama Anime: Emotion and Depth
+        Drama anime dives deep into emotional storytelling, exploring themes of love, loss, and personal growth. These series captivate viewers with heartfelt moments, complex characters, and moving narratives. Prepare for an unforgettable journey through the highs and lows of human experience.
+        </p>
+</header>
+
+<div class="container">
+
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Your Lie in April</h2>
+            <p class="anime-details">Episodes: 22<br>Studio: A-1 Pictures<br>Status: Completed</p>
+            <p class="anime-summary">A talented pianist, Kousei Arima, rediscovers his passion for music with the help of a free-spirited violinist, Kaori Miyazono.</p>
+            <iframe src="https://www.youtube.com/embed/aMJpI_fEsA4?si=xusVJ8U2G8wnnJNj" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Clannad: After Story</h2>
+            <p class="anime-details">Episodes: 24<br>Studio: Kyoto Animation<br>Status: Completed</p>
+            <p class="anime-summary">A heartwarming tale of love, family, and hardships as Tomoya and Nagisa navigate their lives together after high school.</p>
+            <iframe src="https://www.youtube.com/embed/IecYMqp1N4k?si=ANm4H7EF-ZI854Yh" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Anohana: The Flower We Saw That Day</h2>
+            <p class="anime-details">Episodes: 11<br>Studio: A-1 Pictures<br>Status: Completed</p>
+            <p class="anime-summary">A group of childhood friends come together years after their friend's death to fulfill her last wish.</p>
+            <iframe src="https://www.youtube.com/embed/DONLsQWdQzA?si=_FJcaRv2UBy9hN8G" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Violet Evergarden</h2>
+            <p class="anime-details">Episodes: 13<br>Studio: Kyoto Animation<br>Status: Completed</p>
+            <p class="anime-summary">Violet, a former soldier, becomes a ghostwriter in search of meaning and connection in a post-war world.</p>
+            <iframe src="https://www.youtube.com/embed/BUfSen2rYQs?si=DWKnzSMzizzyp5lt" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">March Comes in Like a Lion</h2>
+            <p class="anime-details">Episodes: 44<br>Studio: Shaft<br>Status: Completed</p>
+            <p class="anime-summary">Rei Kiriyama, a professional shogi player, struggles with loneliness and depression while forming new bonds with others.</p>
+            <iframe src="https://www.youtube.com/embed/XrLfN7pQL_s?si=Higre07CZWjvMWBZ" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">A Silent Voice</h2>
+            <p class="anime-details">Episodes: Movie<br>Studio: Kyoto Animation<br>Status: Completed</p>
+            <p class="anime-summary">A former bully seeks redemption by reconnecting with the deaf girl he tormented in elementary school.</p>
+            <iframe src="https://www.youtube.com/embed/nfK6UgLra7g?si=oxj_evRU4aUOJ-Kd" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Fruit Basket</h2>
+            <p class="anime-details">Episodes: 63<br>Studio: TMS Entertainment<br>Status: Completed</p>
+            <p class="anime-summary">Tohru Honda’s life changes when she meets the mysterious Soma family, who turn into animals of the Chinese zodiac.</p>
+            <iframe src="https://www.youtube.com/embed/Wz0P0mYYY0Q?si=manWfqesyUBJ5yUo" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Tokyo Magnitude 8.0</h2>
+            <p class="anime-details">Episodes: 11<br>Studio: Bones, Kinema Citrus<br>Status: Completed</p>
+            <p class="anime-summary">Two siblings, Mirai and Yuuki, struggle to survive and find their family after a massive earthquake devastates Tokyo.</p>
+            <iframe src="https://www.youtube.com/embed/0VyViKOvLdM?si=dc7zsp61n64ofl_N" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Plastic Memories</h2>
+            <p class="anime-details">Episodes: 13<br>Studio: Doga Kobo<br>Status: Completed</p>
+            <p class="anime-summary">Tsukasa and Isla work to retrieve androids near the end of their lifespan while exploring the meaning of love and memory.</p>
+            <iframe src="https://www.youtube.com/embed/Blf39o5diHo?si=lcEsW_8TCW-_DMC0" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Orange</h2>
+            <p class="anime-details">Episodes: 13<br>Studio: Telecom Animation Film<br>Status: Completed</p>
+            <p class="anime-summary">Naho receives a letter from her future self, warning her to prevent her classmate's tragic fate.</p>
+            <iframe src="https://www.youtube.com/embed/kVDqRG0qbBs?si=-m9fGu0kmRGqR1xA" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Erased (Boku dake ga Inai Machi)</h2>
+            <p class="anime-details">Episodes: 12<br>Studio: A-1 Pictures<br>Status: Completed</p>
+            <p class="anime-summary">Satoru Fujinuma, a man with the ability to time-travel, attempts to prevent a series of kidnappings from his past.</p>
+            <iframe src="https://www.youtube.com/embed/DwmxEAWjTQQ?si=i6wAnbk_i6LUiv4Q" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">The Garden of Words</h2>
+            <p class="anime-details">Episodes: Movie<br>Studio: CoMix Wave Films<br>Status: Completed</p>
+            <p class="anime-summary">A chance encounter between a high school student and a mysterious woman in a rainy garden leads to a deep emotional bond.</p>
+            <iframe src="https://www.youtube.com/embed/uR_3mwYl6Q4?si=pwTsYzVuVhhsHumI" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+</div>
+
+
+</div>
+
+<script>
+    function likeAnime(button) {
+        
+        const likeCountElement = button.nextElementSibling.querySelector('span');
+        let currentCount = parseInt(likeCountElement.innerText);
+        likeCountElement.innerText = currentCount + 1;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,392 @@
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Anime</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;  
+            color: #fff;  
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .anime-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .anime-box {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00ffff; 
+            width: 300px;
+            margin: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;  
+            position: relative;
+        }
+
+        .anime-box img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .anime-box h2 {
+            margin: 15px 0;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .anime-box .like-btn {
+            background-color: transparent;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-image: url('heart-icon.png'); 
+            background-size: cover;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .anime-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 15px gold;  /* Golden glow effect on hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .back-btn {
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ff4757;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        /* Enlarged box when double-clicked */
+        .anime-box.expanded {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 100;
+            background-color: #333;
+            box-shadow: none;
+            overflow-y: auto;
+            margin: 0;
+            border-radius: 0;
+            padding: 20px;
+        }
+
+        .anime-box.expanded img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .anime-box.expanded .back-btn {
+            display: block;
+        }
+
+        .anime-box.expanded h2, .anime-box.expanded p {
+            color: white;
+        }
+
+        .anime-box.expanded .anime-info {
+            display: block;  /* Show anime info when expanded */
+        }
+
+        .anime-info {
+            display: none;  /* Hidden by default */
+            color: white;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        /* Suspenseful plot text */
+        .plot {
+            margin-top: 10px;
+            font-style: italic;
+            color: #ffdf00; /* Gold-like suspense text */
+        }
+
+        /* Trailer alignment centered */
+        .trailer {
+            margin: 20px auto;
+            display: block;
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+        }
+
+        
+        @media (max-width: 768px) {
+            .anime-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .anime-box {
+                width: 90%;
+            }
+
+            .anime-box.expanded img {
+                width: 100%;
+            }
+
+            .trailer {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mystery Anime</h1>
+        <p> Welcome to the Mystery Anime Realm!
+            Dive into a world of suspense and intrigue, where each story unravels a web of secrets and unexpected twists. From psychological thrillers to supernatural mysteries, these captivating series will keep you on the edge of your seat. Join us as we explore the enigmatic narratives and unforgettable characters that make mystery anime a thrilling genre!
+            !! DO DOUBLE CLICK ON ANIME FOR MORE INFORMATION !!
+        </p>
+    </header>
+
+    <div class="anime-container">
+        <div class="anime-box" id="death-note">
+            <button class="back-btn">Back</button>
+            <img src="Death Note.jpg" alt="Death Note">
+            <h2>Death Note</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Madhouse</p>
+                <p><strong>Episodes:</strong> 37</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> A high school student discovers a mysterious notebook that allows him to kill anyone by writing their name in it. As he seeks to create a utopia free of crime, a brilliant detective challenges him.</p>
+                <p class="plot">As the cat-and-mouse game unfolds, will the lines between justice and revenge blur?</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/NlJZ-YgAt-c?si=dbIo4aOadLslSVRd" title="Death Note Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="steins-gate">
+            <button class="back-btn">Back</button>
+            <img src="steinsgate-wallpapers.png" alt="Steins;Gate">
+            <h2>Steins;Gate</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> White Fox</p>
+                <p><strong>Episodes:</strong> 24</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> A group of friends accidentally invents a time machine, leading to unforeseen consequences as they try to manipulate time.</p>
+                <p class="plot">But as they tamper with fate, will they uncover secrets better left forgotten?</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/uMYhjVwp0Fk?si=jl6yMVOUC6psZ3-E" title="Steins;Gate Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="paranoia-agent">
+            <button class="back-btn">Back</button>
+            <img src="Paranoia Agent.jpg" alt="Paranoia Agent">
+            <h2>Paranoia Agent</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Madhouse</p>
+                <p><strong>Episodes:</strong> 13</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> A series of mysterious attacks by a figure known as "Lil' Slugger" sparks a media frenzy, leading to a psychological exploration of fear and paranoia.</p>
+                <p class="plot">As investigators dig deeper, will they uncover the truth behind the terror?</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/-uYmKfteXig?si=h3ZcZvZ6Qyk-2vWi" title="Paranoia Agent Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="the-promised-neverland">
+            <button class="back-btn">Back</button>
+            <img src="The Promised Neverland.jpg" alt="The Promised Neverland">
+            <h2>The Promised Neverland</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> CloverWorks</p>
+                <p><strong>Episodes:</strong> 12</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> Orphans at a seemingly perfect orphanage discover a dark secret that leads them to plan their escape from a sinister fate.</p>
+                <p class="plot">Will their intelligence and courage be enough to outsmart their captors?</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/S8t1t9t9O04" title="The Promised Neverland Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="the-perfect-blue">
+            <button class="back-btn">Back</button>
+            <img src="perfect-blue-wallpapers.jpg" alt="Perfect Blue">
+            <h2>Perfect Blue</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Madhouse</p>
+                <p><strong>Episodes:</strong> 1 (Movie)</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> A retired pop idol turned actress becomes the target of an obsessive fan, leading her into a psychological thriller filled with paranoia and identity crisis.</p>
+                <p class="plot">As her reality begins to blur, will she unravel the truth before it's too late?</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/Vh3VltJ2EIA" title="Perfect Blue Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        
+        <div class="anime-box" id="ghost-in-the-shell">
+            <button class="back-btn">Back</button>
+            <img src="Ghost in the Shell.jpg" alt="Ghost in the Shell">
+            <h2>Ghost in the Shell</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Production I.G</p>
+                <p><strong>Episodes:</strong> 52</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> In a futuristic world, a cybernetic government agent investigates crimes involving advanced technology and human consciousness.</p>
+                <p class="plot">As she delves deeper, will she find answers or lose her own identity?</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/o7k8hEVH9Mc" title="Ghost in the Shell Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="baccano">
+            <button class="back-btn">Back</button>
+            <img src="baccano-wallpapers.png" alt="Baccano!">
+            <h2>Baccano!</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Brain's Base</p>
+                <p><strong>Episodes:</strong> 13</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> Set in the early 1930s, various characters collide in a series of interwoven events involving alchemy, immortality, and murder.</p>
+                <p class="plot">Can they survive the chaos, or will their fates intertwine in unexpected ways?</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/HDQyC6A9gSk" title="Baccano! Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="shiki">
+            <button class="back-btn">Back</button>
+            <img src="Shiki.webp" alt="Shiki">
+            <h2>Shiki</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Daume</p>
+                <p><strong>Episodes:</strong> 22</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> In a small village, a series of mysterious deaths lead to the discovery of a horrifying secret about the nature of the living and the dead.</p>
+                <p class="plot">As darkness spreads, who will survive the nightmare?</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/5lGFfh4Fn8c" title="Shiki Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="the-case-files-of-jeweler-richard">
+            <button class="back-btn">Back</button>
+            <img src="The Case Files.webp" alt="The Case Files of Jeweler Richard">
+            <h2>The Case Files of Jeweler Richard</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Shuka</p>
+                <p><strong>Episodes:</strong> 12</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> A jeweler and his apprentice solve various cases related to jewelry, uncovering hidden truths about their clients and their pasts.</p>
+                <p class="plot">As they delve deeper into the world of gems, what mysteries will they reveal?</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/9e5X9bStj1M" title="The Case Files of Jeweler Richard Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        
+        <div class="anime-box" id="another">
+            <button class="back-btn">Back</button>
+            <img src="another.jpg" alt="Another">
+            <h2>Another</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> P.A. Works</p>
+                <p><strong>Episodes:</strong> 12</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> A new student transfers to a school plagued by a series of mysterious deaths and discovers a terrifying secret about his classmates.</p>
+                <p class="plot">As the body count rises, can he uncover the truth before it's too late?</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/5X3HnHntYfM" title="Another Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="hyouka">
+            <button class="back-btn">Back</button>
+            <img src="Hyouka.png" alt="Hyouka">
+            <h2>Hyouka</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Kyoto Animation</p>
+                <p><strong>Episodes:</strong> 22</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> A high school student with a love for the mundane finds himself drawn into various mysteries by his curious classmate.</p>
+                <p class="plot">Can he solve these everyday puzzles, or will he remain apathetic to the wonders around him?</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/ZCj4ALeZslY" title="Hyouka Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mystery Anime Fan Page</p>
+    </footer>
+
+    <script>
+        // Double-click to expand the anime box
+        const animeBoxes = document.querySelectorAll('.anime-box');
+
+        animeBoxes.forEach(box => {
+            box.addEventListener('dblclick', () => {
+                box.classList.add('expanded');
+            });
+
+            const backButton = box.querySelector('.back-btn');
+            backButton.addEventListener('click', () => {
+                box.classList.remove('expanded');
+            });
+        });
+    </script>
+</body>
+</html>

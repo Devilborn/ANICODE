@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url(your\ name\ 1-Photoroom.png-Photoroom.png) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .wrapper {
+            width: 420px;
+            background: transparent;
+            border: 2px solid rgba(250, 213, 2, 0.2);
+            backdrop-filter: blur(10px);
+            color: rgb(252, 181, 1);
+            border-radius: 12px; 
+            padding: 30px 40px;
+        }
+
+        .wrapper h1 {
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .wrapper .input-box {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 30px 0;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid rgba(247, 167, 5, 0.2);
+            border-radius: 40px;
+            color: rgb(252, 185, 3);
+            font-size: 16px;
+            padding: 20px 45px 20px 20px;
+        }
+
+        .input-box label {
+            position: absolute;
+            left: 20px;
+            top: -15px;
+            background-color: transparent;
+            color: gold;
+            font-size: 14px;
+            padding: 0 5px;
+        }
+
+        .input-box i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+
+        .wrapper .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14.5px;
+            margin: -15px 0 15px;
+        }
+
+        .remember-forgot a {
+            color: gold;
+            text-decoration: none;
+        }
+
+        .remember-forgot a:hover {
+            text-decoration: underline;
+        }
+
+        .wrapper .btn {
+            width: 100%;
+            height: 45px;
+            border-radius: 40px;
+            border: none;
+            outline: none;
+            box-shadow: 0 0 10px rgba(246, 161, 4, 0.1);
+            cursor: pointer;
+            font-size: 16px;
+            color: gold;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Step 1: Enter Email -->
+    <div class="wrapper" id="step-1">
+        <form id="email-form">
+            <h1>Forgot Password</h1>
+            <div class="input-box">
+                <label for="email">Your E-mail ID</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <i class='bx bxs-user-circle'></i>
+            </div>
+            <button type="button" class="btn" onclick="goToStep2()">Submit Email</button>
+        </form>
+    </div>
+
+    <!-- Step 2: Enter Reset Code -->
+    <div class="wrapper" id="step-2" style="display: none;">
+        <form id="reset-form">
+            <h1>Reset Password</h1>
+            <div class="input-box">
+                <label for="reset-code">Reset Code</label>
+                <input type="text" id="reset-code" placeholder="Enter your reset code" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="remember-forgot">
+                <a href="#" id="resend-code">Resend Code</a>
+            </div>
+            <button type="button" class="btn" onclick="goToStep3()">Submit Code</button>
+        </form>
+    </div>
+
+    <!-- Step 3: Enter New Password -->
+    <div class="wrapper" id="step-3" style="display: none;">
+        <form id="new-password-form">
+            <h1>Set New Password</h1>
+            <div class="input-box">
+                <label for="new-password">New Password</label>
+                <input type="password" id="new-password" placeholder="Enter new password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="input-box">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm new password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <button type="button" class="btn" onclick="submitNewPassword()">Change Password</button>
+        </form>
+    </div>
+
+    <script>
+        function goToStep2() {
+            const email = document.getElementById('email').value;
+            if (email) {
+                document.getElementById('step-1').style.display = 'none';
+                document.getElementById('step-2').style.display = 'block';
+            } else {
+                alert("Please enter a valid email address.");
+            }
+        }
+
+        function goToStep3() {
+            const resetCode = document.getElementById('reset-code').value;
+            if (resetCode) {
+                // Simulate reset code verification
+                alert("Your code is correct. You can now reset your password.");
+                document.getElementById('step-2').style.display = 'none';
+                document.getElementById('step-3').style.display = 'block';
+            } else {
+                alert("Please enter the reset code sent to your email.");
+            }
+        }
+
+        function submitNewPassword() {
+            const newPassword = document.getElementById('new-password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (newPassword === confirmPassword) {
+                // Simulate password update process
+                alert("New password has been updated.");
+                // Redirect to login page or another appropriate action
+            } else {
+                alert("New password and confirm password do not match. Please try again.");
+                reloadStep3();
+            }
+        }
+
+        function reloadStep3() {
+            // Refresh Step 3 without going back to Step 1
+            document.getElementById('new-password-form').reset(); // Reset only the password fields
+        }
+    </script>
+</body>
+</html>

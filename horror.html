@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horror Anime</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(girlsssss.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+           background-image: url(animebalckeyes.jpg);
+           background-repeat: no-repeat;
+           background-size: cover;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .anime-box {
+            background-color: black;
+            background-size: cover;
+            border-radius: 10px;
+            width: 300px;
+            margin: 15px;
+            box-shadow: 0px 4px 8px hsl(45, 100%, 50%);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .anime-box:hover {
+            transform: scale(1.05);
+           
+        }
+        .anime-info {
+            padding: 15px;
+        }
+        .anime-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #00ffcc;
+        }
+        .anime-details {
+            margin: 10px 0;
+            color: hwb(173 1% 1%);
+        }
+        .anime-summary {
+            font-size: 14px;
+            color: hsl(173, 96%, 49%);
+            margin-bottom: 10px;
+        }
+        .like-button {
+            background-color: hsl(182, 100%, 50%);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+        .like-button:hover {
+            background-color: #ff0000;
+        }
+        .like-count {
+            margin-top: 10px;
+            font-size: 14px;
+            color: hsl(172, 94%, 50%);
+        }
+        iframe {
+            width: 100%;
+            height: 180px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Horror Anime</h1>
+    <p>Welcome to Horror Anime Nightmares!
+        Enter the chilling world of horror anime, where suspense and supernatural thrills await! Our collection features spine-tingling tales that will keep you on the edge of your seat. Whether you’re a seasoned fan or new to the genre, prepare for a heart-pounding experience with our curated selection of the most terrifying series. Dare to explore!</p>
+</header>
+
+<div class="container">
+
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Tokyo Ghoul</h2>
+            <p class="anime-details">Episodes: 48<br>Studio: Pierrot<br>Status: Completed</p>
+            <p class="anime-summary">In a world where flesh-eating ghouls exist, Kaneki becomes half-ghoul after a chance encounter and must navigate his new identity.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vGuQeQsoRgU?si=-Qrf6afucqfrEaiL" frameborder="0" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Another</h2>
+            <p class="anime-details">Episodes: 12<br>Studio: P.A. Works<br>Status: Completed</p>
+            <p class="anime-summary">A transfer student uncovers the horrifying secret of a cursed class as a series of mysterious deaths occur.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_U_57mzfjB4?si=FYqGxmInMmRP019Q" frameborder="0" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Higurashi: When They Cry</h2>
+            <p class="anime-details">Episodes: 50<br>Studio: Deen<br>Status: Completed</p>
+            <p class="anime-summary">In a rural village, a group of friends uncover a dark mystery involving gruesome murders and paranoia.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LCBt4QD0qs0?si=rzeHmzcvcG6YqS-9" frameborder="0" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Paranoia Agent</h2>
+            <p class="anime-details">Episodes: 13<br>Studio: Madhouse<br>Status: Completed</p>
+            <p class="anime-summary">A mysterious assailant known as "Lil' Slugger" spreads fear across Tokyo, causing paranoia among its citizens.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-uYmKfteXig?si=LeIAX9O1cy5AVLQx" frameborder="0" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">The Promised Neverland</h2>
+            <p class="anime-details">Episodes: 12<br>Studio: CloverWorks<br>Status: Completed</p>
+            <p class="anime-summary">Children at an orphanage discover the dark truth about their fate and plan a daring escape.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ApLudqucq-s?si=KbhAu6fBm4yKc9Ou" frameborder="0" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Corpse Party: Tortured Souls</h2>
+            <p class="anime-details">Episodes: 4<br>Studio: Asread<br>Status: Completed</p>
+            <p class="anime-summary">A group of students find themselves trapped in a haunted school after performing a cursed ritual.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/76vJ4awYjmo?si=xByLvytq9ZmT7PAu" frameborder="0" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Shiki</h2>
+            <p class="anime-details">Episodes: 22<br>Studio: Daume<br>Status: Completed</p>
+            <p class="anime-summary">As a mysterious disease spreads through a rural town, the residents uncover a chilling connection to the undead.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xL-xBUx6Qzs?si=G5IsPqMCOM6MyQR0" frameborder="0" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Hell Girl</h2>
+            <p class="anime-details">Episodes: 26<br>Studio: Aniplex<br>Status: Completed</p>
+            <p class="anime-summary">People in despair can summon Ai Enma, the Hell Girl, to take vengeance, but at a terrible price.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Zo5wuctIMWk?si=jyj99017n2zprGOx" frameborder="0" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Death Parade</h2>
+            <p class="anime-details">Episodes: 12<br>Studio: Madhouse<br>Status: Completed</p>
+            <p class="anime-summary">After death, people are judged through games in a mysterious bar, revealing their true natures.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZaIatel6BHI?si=XrDc7ULQ8aGrqaZH" frameborder="0" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Monster</h2>
+            <p class="anime-details">Episodes: 74<br>Studio: Madhouse<br>Status: Completed</p>
+            <p class="anime-summary">Dr. Tenma's life turns upside down when he saves a young boy who grows up to be a remorseless killer.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9aS-EgdAq6U?si=Ns8lpsG_-zgQjkmD" frameborder="0" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Ghost Hunt</h2>
+            <p class="anime-details">Episodes: 25<br>Studio: J.C. Staff<br>Status: Completed</p>
+            <p class="anime-summary">A group of paranormal investigators confronts malevolent spirits and uncover the truth behind haunted locations.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/iaTt3r6S308?si=HitLMsCcNZpV9JgY" frameborder="0" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Danganronpa: The Animation</h2>
+            <p class="anime-details">Episodes: 13<br>Studio: Lerche<br>Status: Completed</p>
+            <p class="anime-summary">High school students are trapped in a deadly game where they must murder each other without getting caught.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/266zEWMYHds?si=_5xfW-VQZionWMSd" frameborder="0" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+   
+  
+
+
+</div>
+
+<script>
+    function likeAnime(button) {
+        
+        const likeCountElement = button.nextElementSibling.querySelector('span');
+        let currentCount = parseInt(likeCountElement.innerText);
+        likeCountElement.innerText = currentCount + 1;
+    }
+</script>
+
+</body>
+</html>

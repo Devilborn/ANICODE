@@ -1,0 +1,407 @@
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comedy Anime</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;  
+            color: #fff;  
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .anime-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .anime-box {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00ffff; 
+            width: 300px;
+            margin: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;  
+            position: relative;
+        }
+
+        .anime-box img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .anime-box h2 {
+            margin: 15px 0;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .anime-box .like-btn {
+            background-color: transparent;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-image: url('heart-icon.png'); 
+            background-size: cover;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .anime-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 15px gold;  /* Golden glow effect on hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .back-btn {
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ff4757;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        /* Enlarged box when double-clicked */
+        .anime-box.expanded {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 100;
+            background-color: #333;
+            box-shadow: none;
+            overflow-y: auto;
+            margin: 0;
+            border-radius: 0;
+            padding: 20px;
+        }
+
+        .anime-box.expanded img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .anime-box.expanded .back-btn {
+            display: block;
+        }
+
+        .anime-box.expanded h2, .anime-box.expanded p {
+            color: white;
+        }
+
+        .anime-box.expanded .anime-info {
+            display: block;  
+        }
+
+        .anime-info {
+            display: none; 
+            color: white;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+       
+        .plot {
+            margin-top: 10px;
+            font-style: italic;
+            color: #ffdf00;
+        }
+
+        
+        .trailer {
+            margin: 20px auto;
+            display: block;
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+        }
+
+        
+        @media (max-width: 768px) {
+            .anime-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .anime-box {
+                width: 90%;
+            }
+
+            .anime-box.expanded img {
+                width: 100%;
+            }
+
+            .trailer {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Comedy Anime</h1>
+        <p>
+            Comedy Anime: Laughter and Fun
+            Comedy anime is all about lighthearted fun, quirky characters, and laugh-out-loud moments. Whether it's clever jokes or wild antics, these shows are perfect for a good time. Explore hilarious adventures and get ready to smile!
+        !! DO DOUBLE CLICK ON ANIME FOR MORE INFORMATION !!</p>
+    </header>
+
+    <div class="anime-container">
+       
+        <div class="anime-box" id="gintama">
+            <button class="back-btn">Back</button>
+            <img src="Gintama.jpg" alt="Gintama">
+            <h2>Gintama</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Sunrise</p>
+                <p><strong>Episodes:</strong> 367</p>
+                <p><strong>Status:</strong> Finished</p>
+                <p><strong>Summary:</strong> Set in an alternate-history Edo period, Gintoki Sakata, a freelancer, tackles odd jobs with his friends in a world where aliens have invaded. Chaos and comedy follow.</p>
+                <p class="plot">The adventures of this unlikely trio are packed with ridiculous humor, insane action, and touching moments that will leave you laughing and crying.</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/bZYysREKnm4?si=PgL-g5C5q2GJhxIH" title="Gintama Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="konosuba">
+            <button class="back-btn">Back</button>
+            <img src="Konosuba.png" alt="Konosuba">
+            <h2>Konosuba: God's Blessing on This Wonderful World!</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Studio Deen</p>
+                <p><strong>Episodes:</strong> 20 + OVAs + Movie</p>
+                <p><strong>Status:</strong> Ongoing</p>
+                <p><strong>Summary:</strong> Kazuma, a teenager who dies an untimely death, is reincarnated into a fantasy world with a group of dysfunctional adventurers. Hilarity ensues as they bumble through quests.</p>
+                <p class="plot">This isekai comedy focuses on their misadventures, blending laugh-out-loud humor with over-the-top fantasy antics.</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/N1AO7k2o78g?si=IG2X8XLTJ-ajXSOT" title="Konosuba Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="saiki-k">
+            <button class="back-btn">Back</button>
+            <img src="The Disastrous Life of Saiki K.webp" alt="The Disastrous Life of Saiki K.">
+            <h2>The Disastrous Life of Saiki K.</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> J.C. Staff, Egg Firm</p>
+                <p><strong>Episodes:</strong> 120 + Movie</p>
+                <p><strong>Status:</strong> Finished</p>
+                <p><strong>Summary:</strong> Saiki Kusuo, a psychic high schooler, just wants a normal life. Unfortunately, his supernatural abilities bring one comical situation after another.</p>
+                <p class="plot">Despite his power, Saiki is surrounded by oddball characters who continuously drag him into bizarre scenarios, resulting in endless laughter.</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/sbw7QB6nrTc?si=sC57gULPm4-rBmWK" title="Saiki K Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="nichijou">
+            <button class="back-btn">Back</button>
+            <img src="Nichijou (My Ordinary Life).webp" alt="Nichijou">
+            <h2>Nichijou (My Ordinary Life)</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Kyoto Animation</p>
+                <p><strong>Episodes:</strong> 26</p>
+                <p><strong>Status:</strong> Finished</p>
+                <p><strong>Summary:</strong> A surreal comedy about three high school girls and their bizarre everyday life. From talking cats to epic battles, this anime takes ordinary moments and makes them extraordinary.</p>
+                <p class="plot">Expect over-the-top reactions, absurd situations, and impeccable comedic timing that will have you in stitches.</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/53ejT195VVc?si=P5Ia2803e78Z3i9C" title="Nichijou Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="onepunchman">
+            <button class="back-btn">Back</button>
+            <img src="One Punch Man.png" alt="One Punch Man">
+            <h2>One Punch Man</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Madhouse, J.C. Staff</p>
+                <p><strong>Episodes:</strong> 24 + OVAs</p>
+                <p><strong>Status:</strong> Ongoing</p>
+                <p><strong>Summary:</strong> Saitama, a hero who can defeat any enemy with a single punch, seeks a challenge. His struggle to find excitement leads to comedic interactions with powerful and bizarre foes.</p>
+                <p class="plot">The anime parodies superhero tropes while delivering jaw-dropping action scenes and hilarious moments.</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/Poo5lqoWSGw?si=vEAO3metTF9HU7Oo" title="One Punch Man Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="dailylives">
+            <button class="back-btn">Back</button>
+            <img src="Daily Lives.webp" alt="Daily Lives of High School Boys">
+            <h2>Daily Lives of High School Boys</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Sunrise</p>
+                <p><strong>Episodes:</strong> 12</p>
+                <p><strong>Status:</strong> Finished</p>
+                <p><strong>Summary:</strong> A slice-of-life comedy about a group of high school boys and their ridiculous adventures. Whether it's role-playing or overthinking interactions, every moment is filled with humor.</p>
+                <p class="plot">The characters' exaggerated antics and playful banter will leave you laughing out loud.</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/m_ywkjjPVfY?si=X1Opy6kl0Qkjx61O" title="Daily Lives of High School Boys Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="asobi-asobase">
+            <button class="back-btn">Back</button>
+            <img src="Asobi Asobase.png" alt="Asobi Asobase">
+            <h2>Asobi Asobase</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Lerche</p>
+                <p><strong>Episodes:</strong> 12</p>
+                <p><strong>Status:</strong> Finished</p>
+                <p><strong>Summary:</strong> Three eccentric girls form a club to play games after school, leading to absurd and chaotic situations. Their exaggerated reactions and unpredictable antics fuel the comedy.</p>
+                <p class="plot">The juxtaposition of calm visuals and outlandish humor makes every episode an entertaining ride.</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/-Rm66GCzzVw" title="Asobi Asobase Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="kaguyasama">
+            <button class="back-btn">Back</button>
+            <img src="Kaguya-sama.jpg" alt="Kaguya-sama: Love Is War">
+            <h2>Kaguya-sama: Love Is War</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> A-1 Pictures</p>
+                <p><strong>Episodes:</strong> 37 + Movie</p>
+                <p><strong>Status:</strong> Ongoing</p>
+                <p><strong>Summary:</strong> Two high school geniuses, Kaguya and Shirogane, are too proud to confess their feelings and engage in psychological warfare to make the other confess first. A battle of wits ensues.</p>
+                <p class="plot">The romantic tension, sharp humor, and tactical "mind games" make this a standout in the romantic comedy genre.</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/_aG-8lXBHw4" title="Kaguya-sama Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="gto">
+            <button class="back-btn">Back</button>
+            <img src="Great Teacher Onizuka.jpg" alt="Great Teacher Onizuka">
+            <h2>Great Teacher Onizuka</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Studio Pierrot</p>
+                <p><strong>Episodes:</strong> 43</p>
+                <p><strong>Status:</strong> Finished</p>
+                <p><strong>Summary:</strong> Eikichi Onizuka, a former delinquent, becomes a high school teacher, aiming to be the greatest teacher ever. His unorthodox methods lead to hilarious yet meaningful lessons.</p>
+                <p class="plot">Onizuka’s charisma and antics earn him respect and friendship from even the most troubled students, making this both a comedic and heartwarming anime.</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/SVyoBS-3Nk4" title="Great Teacher Onizuka Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="schoolrumble">
+            <button class="back-btn">Back</button>
+            <img src="School Rumble.jpg" alt="School Rumble">
+            <h2>School Rumble</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Studio Comet</p>
+                <p><strong>Episodes:</strong> 52 + OVAs</p>
+                <p><strong>Status:</strong> Finished</p>
+                <p><strong>Summary:</strong> A romantic comedy filled with misunderstandings, School Rumble follows the lives of Tenma and her crush, as well as her classmates, in a whirlwind of school antics.</p>
+                <p class="plot">The tangled web of crushes, awkward situations, and slapstick moments make this a timeless comedy.</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/bkdpSlO-huc" title="School Rumble Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="anime-box" id="grandblue">
+            <button class="back-btn">Back</button>
+            <img src="Grand Blue Dreaming.jpg" alt="Grand Blue Dreaming">
+            <h2>Grand Blue Dreaming</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Zero-G</p>
+                <p><strong>Episodes:</strong> 12</p>
+                <p><strong>Status:</strong> Finished</p>
+                <p><strong>Summary:</strong> Iori Kitahara moves to a coastal town for university but gets dragged into a wild diving club filled with crazy antics, drinking, and hilarious misadventures.</p>
+                <p class="plot">This anime perfectly combines college life, diving, and over-the-top comedy, leaving viewers laughing at every turn.</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/OedtrpgV-Rk" title="Grand Blue Dreaming Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="ouranhighschool">
+            <button class="back-btn">Back</button>
+            <img src="Ouran High School.jpg" alt="Ouran High School Host Club">
+            <h2>Ouran High School Host Club</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Bones</p>
+                <p><strong>Episodes:</strong> 26</p>
+                <p><strong>Status:</strong> Finished</p>
+                <p><strong>Summary:</strong> Haruhi Fujioka, a scholarship student at a prestigious academy, stumbles into a host club, where she must pretend to be a boy to pay off a debt. Hilarity ensues as she interacts with the quirky members.</p>
+                <p class="plot">Filled with charming characters, funny misunderstandings, and light-hearted moments, this anime is a beloved classic.</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/0N_PJDY5wOA" title="Ouran High School Host Club Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+       
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Comedy Anime Fan Page</p>
+    </footer>
+
+    <script>
+        // Double-click to expand the anime box
+        const animeBoxes = document.querySelectorAll('.anime-box');
+
+        animeBoxes.forEach(box => {
+            box.addEventListener('dblclick', () => {
+                box.classList.add('expanded');
+            });
+
+            const backButton = box.querySelector('.back-btn');
+            backButton.addEventListener('click', () => {
+                box.classList.remove('expanded');
+            });
+        });
+    </script>
+</body>
+</html>

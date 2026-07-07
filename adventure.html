@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Anime</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(girlsssss.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+           background-image: url(animebalckeyes.jpg);
+           background-repeat: no-repeat;
+           background-size: cover;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .anime-box {
+            background-color: black;
+            background-size: cover;
+            border-radius: 10px;
+            width: 300px;
+            margin: 15px;
+            box-shadow: gold;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .anime-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 15px gold; 
+            transform: scale(1.05);
+           
+        }
+        .anime-info {
+            padding: 15px;
+        }
+        .anime-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #00ffcc;
+        }
+        .anime-details {
+            margin: 10px 0;
+            color: hwb(173 1% 1%);
+        }
+        .anime-summary {
+            font-size: 14px;
+            color: hsl(173, 96%, 49%);
+            margin-bottom: 10px;
+        }
+        .like-button {
+            background-color: hsl(182, 100%, 50%);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+        .like-button:hover {
+            background-color: #ff0000;
+        }
+        .like-count {
+            margin-top: 10px;
+            font-size: 14px;
+            color: hsl(172, 94%, 50%);
+        }
+        iframe {
+            width: 100%;
+            height: 180px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Adventure Anime</h1>
+    <p>Explore Epic Worlds with Adventure Anime!
+        Get ready for thrilling quests, magical lands, and daring heroes. Our top picks of adventure anime will take you on unforgettable journeys filled with action, wonder, and excitement. Dive in and start your adventure now!</p>
+</header>
+
+<div class="container">
+
+    <!-- Anime 1 -->
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">One Piece</h2>
+            <p class="anime-details">Episodes: 1000+<br>Studio: Toei Animation<br>Status: Ongoing</p>
+            <p class="anime-summary">Follow Monkey D. Luffy and his pirate crew as they seek the ultimate treasure, the "One Piece," in this legendary adventure.</p>
+            <iframe src="https://www.youtube.com/embed/MCb13lbVGE0?si=uoBe68qHcrTEUh3U" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+
+    <!-- Anime 2 -->
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Hunter x Hunter</h2>
+            <p class="anime-details">Episodes: 148<br>Studio: Madhouse<br>Status: Completed</p>
+            <p class="anime-summary">Gon Freecss embarks on an epic quest to become a Hunter and find his father, encountering powerful foes along the way.</p>
+            <iframe src="https://www.youtube.com/embed/d6kBeJjTGnY" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+
+    <!-- Anime 3 -->
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Fullmetal Alchemist: Brotherhood</h2>
+            <p class="anime-details">Episodes: 64<br>Studio: Bones<br>Status: Completed</p>
+            <p class="anime-summary">The Elric brothers use alchemy to search for the Philosopher's Stone in a world of war, corruption, and dark magic.</p>
+            <iframe src="https://www.youtube.com/embed/kx0nBaS_q50?si=EG-13--lMXVjQFxi" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+
+    <!-- Anime 4 -->
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Made in Abyss</h2>
+            <p class="anime-details">Episodes: 13 (Season 1)<br>Studio: Kinema Citrus<br>Status: Ongoing</p>
+            <p class="anime-summary">A young girl and a robot venture into the mysterious and dangerous Abyss, uncovering its deadly secrets.</p>
+            <iframe src="https://www.youtube.com/embed/kqBNQEUI8dM?si=fdO4k6dZjoFLT9Xk" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+
+    <!-- Anime 5 -->
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Magi: The Labyrinth of Magic</h2>
+            <p class="anime-details">Episodes: 25<br>Studio: A-1 Pictures<br>Status: Completed</p>
+            <p class="anime-summary">Aladdin, Alibaba, and Morgiana journey through dungeons and magical lands in search of their destinies.</p>
+            <iframe src="https://www.youtube.com/embed/X-MG-_moa40?si=dtHeo05Zw517q2Tr" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+
+    <!-- Anime 6 -->
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Sword Art Online</h2>
+            <p class="anime-details">Episodes: 96+<br>Studio: A-1 Pictures<br>Status: Ongoing</p>
+            <p class="anime-summary">Trapped in a virtual reality game, players must fight to survive as they face life-or-death challenges.</p>
+            <iframe src="https://www.youtube.com/embed/6ohYYtxfDCg?si=zcyjlaQQFtDiCHuj" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+
+        <!-- Anime 7 -->
+        <div class="anime-box">
+          <div class="anime-info">
+              <h2 class="anime-title">Dr. Stone</h2>
+              <p class="anime-details">Episodes: 35+<br>Studio: TMS Entertainment<br>Status: Ongoing</p>
+              <p class="anime-summary">After a mysterious phenomenon petrifies humanity, a young genius awakens thousands of years later and aims to rebuild civilization.</p>
+              <iframe src="https://www.youtube.com/embed/aqAw1rilA24?si=3WIz4F3Nw7B1x9LY" allowfullscreen></iframe>
+              <button class="like-button" onclick="likeAnime(this)">Like</button>
+              <p class="like-count">Likes: <span>0</span></p>
+          </div>
+      </div>
+  
+      <!-- Anime 8 -->
+      <div class="anime-box">
+          <div class="anime-info">
+              <h2 class="anime-title">Fairy Tail</h2>
+              <p class="anime-details">Episodes: 328<br>Studio: A-1 Pictures, Satelight<br>Status: Completed</p>
+              <p class="anime-summary">Follow the adventures of Natsu Dragneel and his friends as they take on various quests in the magical world of Fairy Tail.</p>
+              <iframe src="https://www.youtube.com/embed/BaIWwk-sAlw?si=zqod77Rtzw_f396R" allowfullscreen></iframe>
+              <button class="like-button" onclick="likeAnime(this)">Like</button>
+              <p class="like-count">Likes: <span>0</span></p>
+          </div>
+      </div>
+  
+      <!-- Anime 9 -->
+      <div class="anime-box">
+          <div class="anime-info">
+              <h2 class="anime-title">The Rising of the Shield Hero</h2>
+              <p class="anime-details">Episodes: 37+<br>Studio: Kinema Citrus<br>Status: Ongoing</p>
+              <p class="anime-summary">Naofumi Iwatani is summoned to another world as the Shield Hero, facing betrayal and adversity in a quest to save the kingdom.</p>
+              <iframe src="https://www.youtube.com/embed/GO7a4qZ1KVo?si=2DXZA2sZrX8dkiAI" allowfullscreen></iframe>
+              <button class="like-button" onclick="likeAnime(this)">Like</button>
+              <p class="like-count">Likes: <span>0</span></p>
+          </div>
+      </div>
+  
+      <!-- Anime 10 -->
+      <div class="anime-box">
+          <div class="anime-info">
+              <h2 class="anime-title">Re:Zero - Starting Life in Another World</h2>
+              <p class="anime-details">Episodes: 50+<br>Studio: White Fox<br>Status: Ongoing</p>
+              <p class="anime-summary">Subaru Natsuki is transported to a fantasy world where he discovers he has the ability to return from death.</p>
+              <iframe src="https://www.youtube.com/embed/Hyq97LLlsv8?si=TfAoh0Ggv0rhRjj_" allowfullscreen></iframe>
+              <button class="like-button" onclick="likeAnime(this)">Like</button>
+              <p class="like-count">Likes: <span>0</span></p>
+          </div>
+      </div>
+  
+      <!-- Anime 11 -->
+      <div class="anime-box">
+          <div class="anime-info">
+              <h2 class="anime-title">Akame ga Kill!</h2>
+              <p class="anime-details">Episodes: 24<br>Studio: White Fox<br>Status: Completed</p>
+              <p class="anime-summary">Tatsumi joins a group of assassins to fight against a corrupt empire, facing dangerous foes and moral dilemmas.</p>
+              <iframe src="https://www.youtube.com/embed/X1abYr6YC4g?si=FFjhHebzdULCLarh" allowfullscreen></iframe>
+              <button class="like-button" onclick="likeAnime(this)">Like</button>
+              <p class="like-count">Likes: <span>0</span></p>
+          </div>
+      </div>
+  
+      <!-- Anime 12 -->
+      <div class="anime-box">
+          <div class="anime-info">
+              <h2 class="anime-title">Gurren Lagann</h2>
+              <p class="anime-details">Episodes: 27<br>Studio: Gainax<br>Status: Completed</p>
+              <p class="anime-summary">Simon and Kamina fight against oppressive beings in a post-apocalyptic world using a giant robot and their unyielding spirit.</p>
+              <iframe src="https://www.youtube.com/embed/rAQylCHv8Cw?si=KZrYfV1kwlK5NInx" allowfullscreen></iframe>
+              <button class="like-button" onclick="likeAnime(this)">Like</button>
+              <p class="like-count">Likes: <span>0</span></p>
+          </div>
+      </div>
+  
+      <!-- Anime 13 -->
+      <div class="anime-box">
+          <div class="anime-info">
+              <h2 class="anime-title">No Game No Life</h2>
+              <p class="anime-details">Episodes: 12<br>Studio: Madhouse<br>Status: Completed</p>
+              <p class="anime-summary">Siblings Sora and Shiro are transported to a world where everything is determined by games, challenging the world's rules.</p>
+              <iframe src="https://www.youtube.com/embed/ETQUp-Omp-A?si=L5IudtQIWZ5gZCDX" allowfullscreen></iframe>
+              <button class="like-button" onclick="likeAnime(this)">Like</button>
+              <p class="like-count">Likes: <span>0</span></p>
+          </div>
+      </div>
+  
+      <!-- Anime 14 -->
+      <div class="anime-box">
+          <div class="anime-info">
+              <h2 class="anime-title">The Seven Deadly Sins</h2>
+              <p class="anime-details">Episodes: 100+<br>Studio: A-1 Pictures<br>Status: Ongoing</p>
+              <p class="anime-summary">A group of knights known as the Seven Deadly Sins must reunite to save the kingdom from corrupt forces.</p>
+              <iframe src="https://www.youtube.com/embed/wxcvbL6o55M?si=tGw4w2k71WM44pGK" allowfullscreen></iframe>
+              <button class="like-button" onclick="likeAnime(this)">Like</button>
+              <p class="like-count">Likes: <span>0</span></p>
+          </div>
+      </div>
+  
+      <!-- Anime 15 -->
+      <div class="anime-box">
+          <div class="anime-info">
+              <h2 class="anime-title">Log Horizon</h2>
+              <p class="anime-details">Episodes: 62<br>Studio: Satelight<br>Status: Ongoing</p>
+              <p class="anime-summary">Players of a popular MMORPG find themselves trapped in the game, and they must adapt to their new reality.</p>
+              <iframe src="https://www.youtube.com/embed/IG1VhJ75r8k?si=FYT0xq4LZA_rYb03" allowfullscreen></iframe>
+              <button class="like-button" onclick="likeAnime(this)">Like</button>
+              <p class="like-count">Likes: <span>0</span></p>
+          </div>
+      </div>
+  
+      <!-- Anime 16 -->
+      <div class="anime-box">
+          <div class="anime-info">
+              <h2 class="anime-title">DanMachi (Is It Wrong to Try to Pick Up Girls in a Dungeon?)</h2>
+              <p class="anime-details">Episodes: 49+<br>Studio: J.C. Staff<br>Status: Ongoing</p>
+              <p class="anime-summary">Bell Cranel, a young adventurer, seeks fame and fortune in the dungeon-filled city of Orario while finding love.</p>
+              <iframe src="https://www.youtube.com/embed/Nk23ix2xgTg?si=DtgBz7vEwFQDS84y" allowfullscreen></iframe>
+              <button class="like-button" onclick="likeAnime(this)">Like</button>
+              <p class="like-count">Likes: <span>0</span></p>
+          </div>
+      </div>
+  
+      <!-- Anime 17 -->
+      <div class="anime-box">
+          <div class="anime-info">
+              <h2 class="anime-title">Overlord</h2>
+              <p class="anime-details">Episodes: 52+<br>Studio: Madhouse<br>Status: Ongoing</p>
+              <p class="anime-summary">In a virtual reality game, a powerful player becomes the overlord of a fantasy world after the game is shut down.</p>
+              <iframe src="https://www.youtube.com/embed/uhlBqFj9kDw?si=YQDMkWSyMo5Jw3Te" allowfullscreen></iframe>
+              <button class="like-button" onclick="likeAnime(this)">Like</button>
+              <p class="like-count">Likes: <span>0</span></p>
+          </div>
+      </div>
+  
+      <!-- Anime 18 -->
+      <div class="anime-box">
+          <div class="anime-info">
+              <h2 class="anime-title">JoJo’s Bizarre Adventure</h2>
+              <p class="anime-details">Episodes: 150+<br>Studio: David Production<br>Status: Ongoing</p>
+              <p class="anime-summary">An epic saga spanning generations, following the Joestar bloodline as they battle supernatural enemies across time and space.</p>
+              <iframe src="https://www.youtube.com/embed/EeCX8Y0a278?si=K8Ot7M35Xf6_QpIH" allowfullscreen></iframe>
+              <button class="like-button" onclick="likeAnime(this)">Like</button>
+              <p class="like-count">Likes: <span>0</span></p>
+          </div>
+      </div>
+  
+      <!-- Anime 19 -->
+      <div class="anime-box">
+          <div class="anime-info">
+              <h2 class="anime-title">Noragami</h2>
+              <p class="anime-details">Episodes: 25<br>Studio: Bones<br>Status: Completed</p>
+              <p class="anime-summary">Yato, a minor god, dreams of having millions of worshippers and teams up with a girl and a spirit to achieve his goals.</p>
+              <iframe src="https://www.youtube.com/embed/aZenmeRytEM?si=4bKdIQvNxP0xdmW9" allowfullscreen></iframe>
+              <button class="like-button" onclick="likeAnime(this)">Like</button>
+              <p class="like-count">Likes: <span>0</span></p>
+          </div>
+      </div>
+  
+      <!-- Anime 20 -->
+      <div class="anime-box">
+          <div class="anime-info">
+              <h2 class="anime-title">Made in Abyss: Dawn of the Deep Soul</h2>
+              <p class="anime-details">Episodes: 1 Movie<br>Studio: Kinema Citrus<br>Status: Completed</p>
+              <p class="anime-summary">The sequel to the critically acclaimed series, following Riko and Reg as they dive deeper into the Abyss.</p>
+              <iframe src="https://www.youtube.com/embed/Tc-A-PnHzdY?si=Bu9e-RXocKPpEUQk" allowfullscreen></iframe>
+              <button class="like-button" onclick="likeAnime(this)">Like</button>
+              <p class="like-count">Likes: <span>0</span></p>
+          </div>
+      </div>
+<!-- Anime 21 -->
+<div class="anime-box">
+  <div class="anime-info">
+      <h2 class="anime-title">Sword Art Online</h2>
+      <p class="anime-details">Episodes: 96+<br>Studio: A-1 Pictures<br>Status: Ongoing</p>
+      <p class="anime-summary">Players of a virtual reality MMORPG find themselves trapped in the game, where dying in the game means dying in real life. Kirito, a skilled player, must navigate challenges to escape.</p>
+      <iframe src="https://www.youtube.com/embed/PNVPbexLi48?si=AqZHL2Qq0GV0WIcR" allowfullscreen></iframe>
+      <button class="like-button" onclick="likeAnime(this)">Like</button>
+      <p class="like-count">Likes: <span>0</span></p>
+  </div>
+</div>
+
+
+</div>
+
+<script>
+    function likeAnime(button) {
+        
+        const likeCountElement = button.nextElementSibling.querySelector('span');
+        let currentCount = parseInt(likeCountElement.innerText);
+        likeCountElement.innerText = currentCount + 1;
+    }
+</script>
+
+</body>
+</html>

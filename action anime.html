@@ -1,0 +1,446 @@
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Anime</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;  
+            color: #fff;  
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .anime-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .anime-box {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #ff0000; 
+            width: 300px;
+            margin: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;  
+            position: relative;
+        }
+
+        .anime-box img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .anime-box h2 {
+            margin: 15px 0;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .anime-box .like-btn {
+            background-color: transparent;
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-image: url('heart-icon.png'); 
+            background-size: cover;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .anime-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 15px gold;  
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .back-btn {
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ff4757;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+      
+        .anime-box.expanded {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 100;
+            background-color: #333;
+            box-shadow: none;
+            overflow-y: auto;
+            margin: 0;
+            border-radius: 0;
+            padding: 20px;
+        }
+
+        .anime-box.expanded img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .anime-box.expanded .back-btn {
+            display: block;
+        }
+
+        .anime-box.expanded h2, .anime-box.expanded p {
+            color: white;
+        }
+
+        .anime-box.expanded .anime-info {
+            display: block;  
+        }
+
+        .anime-info {
+            display: none;  
+            color: white;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+       
+        .plot {
+            margin-top: 10px;
+            font-style: italic;
+            color: #ffdf00;
+        }
+
+      
+        .trailer {
+            margin: 20px auto;
+            display: block;
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border-radius: 10px;
+        }
+
+        
+        @media (max-width: 768px) {
+            .anime-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .anime-box {
+                width: 100%;
+            }
+
+            .anime-box.expanded img {
+                width: 100%;
+            }
+
+            .trailer {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Action Anime</h1>
+        <p>Action anime are thrilling and high-energy shows that feature intense battles, powerful heroes, and fast-paced plots. With a combination of stunning animation and gripping storylines, action anime keeps viewers on the edge of their seats. Whether it's humanity fighting for survival or heroes striving for greatness, these shows deliver unforgettable experiences.
+            !! DO DOUBLE CLICK ON ANIME FOR MORE INFORMATION !!
+        </p>
+    </header>
+
+    <div class="anime-container">
+        <!-- Attack on Titan -->
+        <div class="anime-box" id="aot">
+            <button class="back-btn">Back</button>
+            <img src="attack2.jpg" alt="Attack on Titan">
+            <h2>Attack on Titan</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Wit Studio</p>
+                <p><strong>Episodes:</strong> 87</p>
+                <p><strong>Status:</strong> Ongoing</p>
+                <p><strong>Summary:</strong> In a world where humanity is on the brink of extinction, soldiers fight giant humanoid creatures known as Titans. Intense battles and mysteries unfold in this thrilling series.</p>
+                <p class="plot">But as the truth behind the Titans unravels, will humanity's greatest weapon become its ultimate downfall? Prepare for a twist that will change everything...</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/MGRm4IzK1SQ" title="Attack on Titan Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Naruto -->
+        <div class="anime-box" id="naruto">
+            <button class="back-btn">Back</button>
+            <img src="photo_82_2023-09-30_14-54-44.jpg" alt="Naruto">
+            <h2>Naruto</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Pierrot</p>
+                <p><strong>Episodes:</strong> 220</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> Naruto, a young ninja, seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village. With epic battles and emotional moments, Naruto's journey inspires viewers.</p>
+                <p class="plot">But in a world filled with ninjas and ancient secrets, the path to greatness is treacherous. Will Naruto discover his hidden strength before it's too late?</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/iQ0rMkymM9Q?si=E7V5-MVrusRPpxlY" title="Naruto Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- My Hero Academia -->
+        <div class="anime-box" id="mha">
+            <button class="back-btn">Back</button>
+            <img src="my hero.webp" alt="My Hero Academia">
+            <h2>My Hero Academia</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Bones</p>
+                <p><strong>Episodes:</strong> 138</p>
+                <p><strong>Status:</strong> Ongoing</p>
+                <p><strong>Summary:</strong> In a world where almost everyone has superpowers, a young boy without powers strives to become the greatest hero. Follow the inspiring journey of Midoriya Izuku.</p>
+                <p class="plot">But with every step he takes, dark forces move in the shadows. Will Midoriya's dreams be crushed before they can bloom?</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/EBjhZ2nPXts" title="My Hero Academia Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Demon Slayer -->
+        <div class="anime-box" id="demonslayer">
+            <button class="back-btn">Back</button>
+            <img src="demons slayers1.webp" alt="Demon Slayer">
+            <h2>Demon Slayer</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> ufotable</p>
+                <p><strong>Episodes:</strong> 44</p>
+                <p><strong>Status:</strong> Ongoing</p>
+                <p><strong>Summary:</strong> After his family is slaughtered by demons, young Tanjiro embarks on a dangerous journey to save his sister and rid the world of the demon scourge.</p>
+                <p class="plot">But as Tanjiro faces stronger demons, dark secrets threaten to tear his world apart. Will he be able to protect what’s left of his family?</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/VQGCKyvzIM4" title="Demon Slayer Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Fate/Zero -->
+        <div class="anime-box" id="fatezero">
+            <button class="back-btn">Back</button>
+            <img src="fate zero1.jpg" alt="Fate/Zero">
+            <h2>Fate/Zero</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> ufotable</p>
+                <p><strong>Episodes:</strong> 25</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> Seven mages summon powerful heroes from history to fight in the Holy Grail War. With breathtaking battles and complex characters, Fate/Zero is a must-watch for any action fan.</p>
+                <p class="plot">But when alliances crumble and betrayal runs deep, the line between hero and villain begins to blur. Who will win the ultimate prize?</p>
+                <iframe class="trailer" src="https://www.youtube.com/embed/6r1INjxEzzE" title="Fate/Zero Trailer" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="anime-box" id="berserk">
+            <button class="back-btn">Back</button>
+            <img src="Berserk1.jpg" alt="Berserk">
+            <h2>Berserk</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> GEMBA, Millepensee</p>
+                <p><strong>Episodes:</strong> 24</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> In a world ravaged by war and darkness, one lone warrior, Guts, must walk the path of vengeance. Armed with his massive sword, he faces relentless demons and haunted memories.</p>
+                <p class="plot">But a mysterious brand etched onto his neck attracts terrifying beings. What is the true curse behind his fate?</p>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="swordartonlineal">
+            <button class="back-btn">Back</button>
+            <img src="Sword Art Online1.jpg" alt="Sword Art Online: Alicization">
+            <h2>Sword Art Online: Alicization</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> A-1 Pictures</p>
+                <p><strong>Episodes:</strong> 47</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> Kirito finds himself trapped in a virtual world unlike any he’s experienced before—Alicization. The line between reality and simulation becomes dangerously blurred.</p>
+                <p class="plot">Will he uncover the truth before time runs out?</p>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="mobpsycho100">
+            <button class="back-btn">Back</button>
+            <img src="Mob Psycho 1002.jpg" alt="Mob Psycho 100">
+            <h2>Mob Psycho 100</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Bones</p>
+                <p><strong>Episodes:</strong> 37</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> Shigeo "Mob" Kageyama is an ordinary boy with immense psychic power. But the real danger lies in the emotion building within him.</p>
+                <p class="plot">What happens when he can no longer control himself?</p>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="vinlandsaga">
+            <button class="back-btn">Back</button>
+            <img src="Vinland Saga2.jpg" alt="Vinland Saga">
+            <h2>Vinland Saga</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Wit Studio, MAPPA</p>
+                <p><strong>Episodes:</strong> 48</p>
+                <p><strong>Status:</strong> Ongoing</p>
+                <p><strong>Summary:</strong> Thorfinn, the son of a legendary Viking warrior, is driven by revenge after witnessing his father's murder. But as the tides of war sweep across the brutal Norse world, he questions his true purpose.</p>
+                <p class="plot">Will he discover a new path amidst the violence?</p>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="akamegakill">
+            <button class="back-btn">Back</button>
+            <img src="Akame ga Kill!1.png" alt="Akame ga Kill!">
+            <h2>Akame ga Kill!</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> White Fox</p>
+                <p><strong>Episodes:</strong> 24</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> Tatsumi joins the assassin group Night Raid to fight the corruption plaguing the capital. Each member wields a powerful Teigu weapon, but with enemies closing in, not everyone will survive.</p>
+                <p class="plot">How many lives will be sacrificed before justice is served?</p>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="blackclover">
+            <button class="back-btn">Back</button>
+            <img src="Black Clover1.png" alt="Black Clover">
+            <h2>Black Clover</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> Pierrot</p>
+                <p><strong>Episodes:</strong> 170</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> In a world where magic is everything, Asta stands out—because he has none. Determined to become the Wizard King, he rises through the ranks with sheer willpower.</p>
+                <p class="plot">Can he conquer the shadow that looms over the kingdom?</p>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="dororo">
+            <button class="back-btn">Back</button>
+            <img src="Dororo1.jpg" alt="Dororo">
+            <h2>Dororo</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> MAPPA, Tezuka Productions</p>
+                <p><strong>Episodes:</strong> 24</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> Born without limbs and many body parts, Hyakkimaru embarks on a quest to reclaim what was stolen from him by demons, accompanied by a cunning young thief.</p>
+                <p class="plot">What will be left of his humanity as he regains his body?</p>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="tokyorevengers">
+            <button class="back-btn">Back</button>
+            <img src="Tokyo Revengers2.jpg" alt="Tokyo Revengers">
+            <h2>Tokyo Revengers</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> LIDENFILMS</p>
+                <p><strong>Episodes:</strong> 37</p>
+                <p><strong>Status:</strong> Ongoing</p>
+                <p><strong>Summary:</strong> Takemichi’s life changes when he travels back in time to prevent the tragic fate of the girl he loves. But infiltrating a violent gang won’t be easy.</p>
+                <p class="plot">Can he alter the course of destiny before it’s too late?</p>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="fairytaildragondry">
+            <button class="back-btn">Back</button>
+            <img src="fairy-tail-dragon-cry-c06lgi65a58nrm80.webp" alt="Fairy Tail: Dragon Cry">
+            <h2>Fairy Tail: Dragon Cry</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> A-1 Pictures</p>
+                <p><strong>Duration:</strong> 1h 24m</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> The Dragon Cry staff has fallen into the wrong hands, and Natsu and Fairy Tail must retrieve it before catastrophe strikes.</p>
+                <p class="plot">But as battles intensify, will Natsu’s secret save his friends, or destroy them?</p>
+            </div>
+        </div>
+        
+        <div class="anime-box" id="dgrayman">
+            <button class="back-btn">Back</button>
+            <img src="D.Gray-man1.jpg" alt="D.Gray-man">
+            <h2>D.Gray-man</h2>
+            <button class="like-btn"></button>
+            <div class="anime-info">
+                <p><strong>Studio:</strong> TMS Entertainment, Dentsu</p>
+                <p><strong>Episodes:</strong> 116</p>
+                <p><strong>Status:</strong> Completed</p>
+                <p><strong>Summary:</strong> Exorcist Allen Walker fights against terrifying Akuma, but he uncovers a sinister truth behind his cursed arm and the demonic Earl controlling them.</p>
+                <p class="plot">Will he save the world and himself from this twisted fate?</p>
+            </div>
+        </div>
+        
+       
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Action Anime Fan Page</p>
+    </footer>
+
+    <script>
+        // Double-click to expand the anime box
+        const animeBoxes = document.querySelectorAll('.anime-box');
+
+        animeBoxes.forEach(box => {
+            box.addEventListener('dblclick', () => {
+                box.classList.add('expanded');
+            });
+
+            const backButton = box.querySelector('.back-btn');
+            backButton.addEventListener('click', () => {
+                box.classList.remove('expanded');
+            });
+        });
+    </script>
+</body>
+</html>

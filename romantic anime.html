@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic  Anime</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(girlsssss.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+           background-image: url(animebalckeyes.jpg);
+           background-repeat: no-repeat;
+           background-size: cover;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .anime-box {
+            background-color: black;
+            background-size: cover;
+            border-radius: 10px;
+            width: 300px;
+            margin: 15px;
+            box-shadow: 0px 4px 8px hsl(45, 100%, 50%);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .anime-box:hover {
+            transform: scale(1.05);
+           
+        }
+        .anime-info {
+            padding: 15px;
+        }
+        .anime-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #00ffcc;
+        }
+        .anime-details {
+            margin: 10px 0;
+            color: hwb(173 1% 1%);
+        }
+        .anime-summary {
+            font-size: 14px;
+            color: hsl(173, 96%, 49%);
+            margin-bottom: 10px;
+        }
+        .like-button {
+            background-color: hsl(182, 100%, 50%);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+        .like-button:hover {
+            background-color: #ff0000;
+        }
+        .like-count {
+            margin-top: 10px;
+            font-size: 14px;
+            color: hsl(172, 94%, 50%);
+        }
+        iframe {
+            width: 100%;
+            height: 180px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Romantic Anime</h1>
+    <p>Introduction to Romantic Anime
+
+        Romantic anime explores the highs and lows of love through heartfelt storytelling and relatable characters. From lighthearted comedies to emotional dramas, these series capture the essence of romance, evoking laughter and tears as they depict the complexities of relationships. Dive into a world where love takes center stage and every moment is filled with emotion.</p>
+</header>
+
+<div class="container">
+
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Your Lie in April</h2>
+            <p class="anime-details">Episodes: 22<br>Studio: A-1 Pictures<br>Status: Completed</p>
+            <p class="anime-summary">A piano prodigy who lost his ability to hear the sound of his own music meets a spirited violinist who brings color back into his life.</p>
+            <iframe src="https://www.youtube.com/embed/3aL0gDZtFbE?si=n8msZtzHqXQRXsgy" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Toradora!</h2>
+            <p class="anime-details">Episodes: 25<br>Studio: J.C. Staff<br>Status: Completed</p>
+            <p class="anime-summary">Ryuuji and Taiga form an unlikely alliance to help each other win over their respective crushes, only to find themselves growing closer.</p>
+            <iframe src="https://www.youtube.com/embed/ENjNTJBxvaQ?si=bKKcV95dBtiUGerj" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Clannad: After Story</h2>
+            <p class="anime-details">Episodes: 24<br>Studio: Kyoto Animation<br>Status: Completed</p>
+            <p class="anime-summary">Follow the journey of Tomoya and Nagisa as they navigate the challenges of adulthood and their growing relationship.</p>
+            <iframe src="https://www.youtube.com/embed/IecYMqp1N4k?si=K96ZggJghRygMLJ5" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Fruits Basket</h2>
+            <p class="anime-details">Episodes: 25<br>Studio: TMS Entertainment<br>Status: Completed</p>
+            <p class="anime-summary">Tohru Honda gets involved with the cursed Sohma family and uncovers their deep secrets while developing bonds of love and friendship.</p>
+            <iframe src="https://www.youtube.com/embed/Wz0P0mYYY0Q?si=u2-6tWZy1WSrQoDg" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Kaguya-sama: Love Is War</h2>
+            <p class="anime-details">Episodes: 12<br>Studio: A-1 Pictures<br>Status: Ongoing</p>
+            <p class="anime-summary">In a battle of wits, Kaguya and Miyuki try to make the other confess their love first, leading to hilarious mind games.</p>
+            <iframe src="https://www.youtube.com/embed/rZ95aZmQu_8?si=qVsWiOtEswRa9pdN" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">My Dress-Up Darling</h2>
+            <p class="anime-details">Episodes: 12<br>Studio: CloverWorks<br>Status: Completed</p>
+            <p class="anime-summary">An introverted boy who makes hina dolls teams up with a popular girl to create stunning cosplay outfits, forging an unexpected romance.</p>
+            <iframe src="https://www.youtube.com/embed/4fR_WMYKvfc?si=Ve0KvUQb8Y8Wy2YD" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Lovely★Complex</h2>
+            <p class="anime-details">Episodes: 24<br>Studio: Toei Animation<br>Status: Completed</p>
+            <p class="anime-summary">A tall girl and a short boy navigate their insecurities and friendship, discovering love in the most unexpected ways.</p>
+            <iframe src="https://www.youtube.com/embed/4nt3bOmkljc?si=YhHlezb4rxwntUHE" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">A Silent Voice</h2>
+            <p class="anime-details">Episodes: 1<br>Studio: Kyoto Animation<br>Status: Completed</p>
+            <p class="anime-summary">Shoya, a boy who bullied a deaf girl in school, seeks redemption years later, leading to heartfelt moments and healing.</p>
+            <iframe src="https://www.youtube.com/embed/nfK6UgLra7g?si=UGp996slSYj6TPem" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Nana</h2>
+            <p class="anime-details">Episodes: 47<br>Studio: Madhouse<br>Status: Completed</p>
+            <p class="anime-summary">Two girls with the same name but very different personalities form a deep bond as they navigate love, friendship, and their dreams.</p>
+            <iframe src="https://www.youtube.com/embed/Tad-n4Xh3nI?si=762kKtEUE34QhCqV" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">The Pet Girl of Sakurasou</h2>
+            <p class="anime-details">Episodes: 24<br>Studio: J.C. Staff<br>Status: Completed</p>
+            <p class="anime-summary">In a dorm filled with eccentric students, a young man finds himself taking care of a talented but socially awkward girl.</p>
+            <iframe src="https://www.youtube.com/embed/3d8EzILpO4c?si=gjh3sHS5g8RA8Knm" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+    <div class="anime-box">
+        <div class="anime-info">
+            <h2 class="anime-title">Ao Haru Ride</h2>
+            <p class="anime-details">Episodes: 12<br>Studio: Production I.G<br>Status: Completed</p>
+            <p class="anime-summary">A girl reunites with her first love in high school, navigating the complexities of teenage romance and growth.</p>
+            <iframe src="https://www.youtube.com/embed//WjkiPyDWHME?si=1WpQ9J7e5-WgU5ij" allowfullscreen></iframe>
+            <button class="like-button" onclick="likeAnime(this)">Like</button>
+            <p class="like-count">Likes: <span>0</span></p>
+        </div>
+    </div>
+    
+
+</div>
+
+<script>
+    function likeAnime(button) {
+        
+        const likeCountElement = button.nextElementSibling.querySelector('span');
+        let currentCount = parseInt(likeCountElement.innerText);
+        likeCountElement.innerText = currentCount + 1;
+    }
+</script>
+
+</body>
+</html>

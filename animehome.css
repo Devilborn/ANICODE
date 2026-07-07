@@ -1,0 +1,335 @@
+ body {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .primary-color {
+      color: #000000;
+    }
+
+    .secondary-color {
+      color: #00FFFF;
+    }
+
+    .accent-color {
+      color: #39FF14;
+    }
+
+
+
+    h1 {
+      color: #FF007F;
+    }
+
+    p {
+      color: #fff;
+    }
+
+    .button {
+      background-color: #00FFFF;
+      color: #fff;
+    }
+
+
+
+
+    body {
+      background-color: black;
+      color: gold;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+    }
+
+
+/* Navigation Bar Styles */
+nav {
+  background-color: rgb(12, 12, 12);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: none;
+  transition: box-shadow 0.3s ease-in-out;
+  flex-wrap: nowrap;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #0cebdc;
+  position: relative;
+  display: block;
+  font-size: 1em;
+  padding: 8px 12px;
+}
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a:hover::before {
+  transform: scaleX(1);
+  background-color: rgb(21, 130, 255);
+}
+
+nav:hover {
+  box-shadow: 0 0 20px rgba(59, 221, 221, 0.8);
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-links a {
+    font-size: 0.9em;
+    padding: 6px 10px;
+  }
+}
+
+
+
+
+
+    #index {
+      background-color: transparent;
+      padding: 20px;
+
+      box-shadow: 0 0 10px rgba(222, 128, 128, 0.452);
+      margin-bottom: 20px;
+    }
+
+    #index h2 {
+      margin-bottom: 10px;
+      color: #08f6c68f;
+    }
+
+    #index ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #index li {
+      margin-bottom: 8px;
+    }
+
+    #index a {
+      text-decoration: none;
+      color: #b0f3f0;
+      transition: color 0.3s ease;
+    }
+
+    #index a:hover {
+      color: #fffb05;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(254, 253, 253, 0.1);
+      transition: transform 0.3s ease;
+
+    }
+
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+    }
+
+
+    th {
+      background-color: #191970;
+      color: #FFFFFF;
+    }
+
+
+    tr:nth-child(odd) {
+      background-color: #000080;
+    }
+
+    tr:nth-child(even) {
+      background-color: #483D8B;
+    }
+
+    tr:hover {
+
+      background-color: transparent;
+
+
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotate 5s infinite linear;
+    }
+
+    .face {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border: 1px solid rgb(253, 250, 250);
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: transform 0.5s;
+    }
+
+    .front {
+      transform: translateZ(25px);
+      background-image: url('https://pngfre.com/wp-content/uploads/anime-115-768x968.png');
+    }
+
+    .back {
+      transform: rotateY(180deg) translateZ(25px);
+      background-image: url('https://pngfre.com/wp-content/uploads/anime-42-738x1024.png');
+    }
+
+    .top {
+      transform: rotateX(90deg) translateZ(25px);
+      background-image: url('https://pngfre.com/wp-content/uploads/anime-77-723x1024.png');
+    }
+
+    .bottom {
+      transform: rotateX(-90deg) translateZ(25px);
+      background-image: url('https://pngfre.com/wp-content/uploads/anime-84-670x1024.png');
+    }
+
+    .left {
+      transform: rotateY(-90deg) translateZ(25px);
+      background-image: url('https://pngfre.com/wp-content/uploads/anime-55-768x891.png');
+    }
+
+    .right {
+      transform: rotateY(90deg) translateZ(25px);
+      background-image: url('https://pngfre.com/wp-content/uploads/anime-51-561x1024.png');
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotateY(0);
+      }
+
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+
+    /* Responsive Design for Smaller Screens */
+    @media screen and (max-width: 768px) {
+      .logo {
+        width: 80px;
+        height: 80px;
+      }
+      
+      .face {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .logo {
+        width: 100px;
+        height: 100px;
+      }
+      
+      .face {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    /* Double Click to Enlarge and Close Cube */
+    .logo.large {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .logo.large .face {
+      width: 100vw;
+      height: 100vh;
+    }
+
+   
+
+    /* .webname {
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .webname h2 {
+      font-size: 3em;
+      font-family: 'Arial', sans-serif;
+      color: #02c0fa;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      background: linear-gradient(90deg, #ffdc6b, #00ffd9);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: glow 2.5s infinite;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .webname h2:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 2px 2px 5px rgba(120, 105, 255, 0.5);
+      }
+
+      50% {
+        text-shadow: 2px 2px 20px rgb(105, 248, 255);
+      }
+
+      100% {
+        text-shadow: 2px 2px 5px #69f0ff80;
+      }
+    } */
